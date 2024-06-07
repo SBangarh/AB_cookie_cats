@@ -8,7 +8,7 @@ Data was sourced from [Kaggle](https://www.kaggle.com/datasets/yufengsui/mobile-
 ## Process
 I started by loading the data and checking or any data integrity issues like nulls and duplicates. I also performed some data cleaning/formatting like changing data types and changing booleans to numeric.
 
-I performed EDA next. I looked at each feature by itself and in relation to other features. 
+I performed EDA next. I looked at each feature by itself and in relation to other features. I noticed some irregularities that could potentially be bots, so I removed them from analysis.
 
 I initially just performed non-parametric tests due to time constraints, but hope to return and transform the data to explore parametric tests
 
@@ -28,5 +28,12 @@ I formulated some hypotheses to test:
     - Ha: There is a difference between the gate_30 and gate_40 versions and the number of users who log on seven day after downloading
     - Test: Chi-square
 
+After hypothesis testing, I attempted to create a model that could predict bots using the limited data I had.
 
 ## Results
+- It appears that the gate_30 group is better at retaining users over a longer time period (seven days) than the gate_40 group. 
+- There was no statistically significant difference in the short term retention (one day) for gate_30 and gate_40. Users in both groups logged into the app one day after downloading at approximately the same frequency
+- There was a statistically significant difference for the average game rounds per gate as well. Gate 30 users tended to play more games on average than gate 40 users.
+
+
+In sum, the gate_30 version was better at retaining users/players long term better than the gate_40 version. 
